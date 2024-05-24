@@ -7,7 +7,9 @@ endif()
 
 # find dependencies
 find_package(ament_cmake REQUIRED)
+find_package(ament_cmake_python REQUIRED)
 find_package(rclcpp REQUIRED)
+find_package(rclpy REQUIRED)
 find_package(std_msgs REQUIRED)
 find_package(geometry_msgs REQUIRED)
 # uncomment the following section in order to fill in
@@ -36,6 +38,16 @@ install(TARGETS turtlesim_controller DESTINATION lib/${PROJECT_NAME})
 add_executable(gazebo_controller src/gazebo_controller.cpp)
 ament_target_dependencies(gazebo_controller rclcpp geometry_msgs)
 install(TARGETS gazebo_controller DESTINATION lib/${PROJECT_NAME})
+
+# Install Python modules
+ament_python_install_package(${PROJECT_NAME})
+
+#Install Python exectables
+install(PROGRAMS
+  src/controller.py
+  DESTINATION lib/${PROJECT_NAME}
+)
+
 
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)
