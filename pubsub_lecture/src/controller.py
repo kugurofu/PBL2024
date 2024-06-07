@@ -4,9 +4,9 @@ from geometry_msgs.msg import Twist
 
 class Controle(Node):
     def __init__(self):
-        super().__init__("turtlesim")
+        super().__init__("gazebo_controlepy")
 
-        self.pub = self.create_publisher(Twist, "/turtle1/cmd_vel",1)
+        self.pub = self.create_publisher(Twist, "/cmd_vel",1)
 
         self.twist = Twist()
 
