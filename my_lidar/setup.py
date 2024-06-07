@@ -13,11 +13,7 @@ setup(
     ],
     install_requires=['setuptools'],
     zip_safe=True,
-<<<<<<< HEAD
     maintainer='ubuntu',
-=======
-    maintainer='kasai',
->>>>>>> 1f3998f37781348e4a6552111969e1cb3e949293
     maintainer_email='tenten31569@icloud.com',
     description='TODO: Package description',
     license='TODO: License declaration',
