@@ -4,7 +4,11 @@
   <name>my_lidar</name>
   <version>0.0.0</version>
   <description>TODO: Package description</description>
+<<<<<<< HEAD
   <maintainer email="tenten31569@icloud.com">ubuntu</maintainer>
+=======
+  <maintainer email="tenten31569@icloud.com">kasai</maintainer>
+>>>>>>> 1f3998f37781348e4a6552111969e1cb3e949293
   <license>TODO: License declaration</license>
 
   <test_depend>ament_copyright</test_depend>
